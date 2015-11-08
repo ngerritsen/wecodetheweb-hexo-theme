@@ -1,0 +1,22 @@
+<%- partial('./_partial/head.ejs') %>
+<%- partial('./_partial/header.ejs') %>
+
+<% var post = page %>
+
+<article class="post">
+  <div class="post--heading" style="background-image: url('<%= url_for(page.path) + 'main.jpg' %>');">
+    <div class="post--heading-overlay"></div>
+    <div class="container">
+      <div class="post--heading-content">
+        <h1 class="post--title"><%= page.title %></h1>
+          <%- partial('./_partial/tag-list.ejs', { post: page }) %>
+      </div>
+    </div>
+  </div>
+  <div class="container post--content">
+    <%- partial('./_partial/meta-data.ejs', { post: page }) %>
+    <%- page.content %>
+  </div>
+</article>
+
+<%- partial('./_partial/footer.ejs') %>

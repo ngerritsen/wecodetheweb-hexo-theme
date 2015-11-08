@@ -1,0 +1,34 @@
+.highlight {
+  background-color: $color-midnight;
+  color: $color-cloud;
+  font-family: Hack, monospace;
+  margin: 0 0 3rem;
+  padding: 1.5rem;
+  overflow: scroll;
+
+  pre {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .gutter {
+    display: none;
+  }
+
+  .keyword {
+    color: #f92672;
+  }
+
+  .string {
+    color: #fd971f
+  }
+
+  .number {
+    color: #66d9ef;
+  }
+
+  .built_in {
+    color: #a6e22e;
+  }
+}

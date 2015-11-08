@@ -1,0 +1,5 @@
+<main class="post-list container">
+  <% posts.each(function(post) { %>
+    <%- partial('./post-list-item.ejs', { post: post }) %>
+  <% }) %>
+</main>

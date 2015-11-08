@@ -1,0 +1,45 @@
+$header-height: 7rem;
+
+.header--container {
+  height: $header-height;
+}
+
+.header {
+  background-color: $color-white;
+  border-bottom: 3px solid $color-cloud;
+  height: $header-height;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: all 0.3s ease;
+  z-index: 999;
+
+  .container {
+    max-width: 100%;
+  }
+
+  &.is-hidden {
+    top: - ( $header-height );
+  }
+}
+
+.header--title {
+  color: $color-midnight;
+  font-size: 3rem;
+  font-family: $logo-font;
+  height: $header-height;
+  line-height: $header-height;
+
+  margin: 0;
+
+  &:before {
+    color: $color-blue;
+    content: '</>';
+    font-weight: bolder;
+    margin-right: 0.3rem;
+  }
+
+  &:hover {
+    color: lighten($color-midnight, 5%);
+  }
+}

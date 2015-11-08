@@ -1,0 +1,40 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $text-font;
+  font-size: 1.6rem;
+}
+
+a,
+a:visited {
+  color: $color-blue;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: darken($color-blue, 10%);
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $heading-font;
+  margin: 0 0 0.6em 0;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  color: $color-text;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 0 3rem 0;
+}
