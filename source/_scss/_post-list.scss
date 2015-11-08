@@ -3,9 +3,6 @@
 }
 
 .post-list--item {
-  @include clearfix;
-
-  display: flex;
   margin-bottom: 6rem;
 
   .meta-data {
@@ -16,10 +13,9 @@
 .post-list--item-image {
   @include background-img($color-midnight);
 
-  height: 20rem;
-  float: left;
-  margin: 0 3rem 0 0;
-  min-width: 24rem;
+  height: 22rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 .post-list--item-title {
@@ -58,5 +54,22 @@
     height: 30rem;
     margin-bottom: 1rem;
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .post-list--item {
+    @include clearfix;
+
+    display: flex;
+  }
+
+  .post-list--item-image {
+    @include background-img($color-midnight);
+
+    float: left;
+    margin: 0 3rem 0 0;
+    min-width: 24rem;
+    width: 24rem;
   }
 }
