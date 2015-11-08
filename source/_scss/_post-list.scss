@@ -23,14 +23,12 @@
 
   a,
   a:visited {
-    font-size: 2rem;
-    color: $color-midnight;
-
+    color: $color-asphalt;
 
     &:hover,
     &:active,
     &:focus {
-      color: $color-midnight;
+      color: $color-asphalt;
       text-decoration: underline;
     }
   }
@@ -38,8 +36,7 @@
 
 .post-list--item-excerpt {
   p {
-    font-size: 0.9em;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1em;
   }
 
   strong {
@@ -71,5 +68,20 @@
     margin: 0 3rem 0 0;
     min-width: 24rem;
     width: 24rem;
+  }
+}
+
+.dark {
+  .post-list--item-title {
+    a,
+    a:visited {
+      color: darken($color-silver, 5%);
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: darken($color-silver, 5%);
+      }
+    }
   }
 }

@@ -40,3 +40,9 @@
     color: desaturate(lighten($color-midnight, 25%), 10%);
   }
 }
+
+.dark {
+  .highlight {
+    background-color: darken($color-midnight, 12%);
+  }
+}

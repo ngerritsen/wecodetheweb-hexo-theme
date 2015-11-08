@@ -25,19 +25,24 @@
   }
 }
 
-.post--heading {
-  .tag-list {
-    bottom: 2rem;
-    position: absolute;
-  }
-}
-
 .post-list--item {
   .tag-list-item {
     background-color: $color-silver;
 
     &:hover {
       background-color: lighten($color-silver, 5%);
+    }
+  }
+}
+
+.dark {
+  .post-list--item {
+    .tag-list-item {
+      background-color: $color-asphalt;
+
+      &:hover {
+        background-color: lighten($color-asphalt, 5%);
+      }
     }
   }
 }

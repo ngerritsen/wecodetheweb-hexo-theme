@@ -6,7 +6,7 @@ $header-height: 7rem;
 
 .header {
   background-color: $color-white;
-  border-bottom: 3px solid $color-cloud;
+  border-bottom: 3px solid darken($color-cloud, 2.5%);
   height: $header-height;
   position: fixed;
   top: 0;
@@ -23,8 +23,26 @@ $header-height: 7rem;
   }
 }
 
+.header--tools {
+  color: darken($color-silver, 10%);
+  float: right;
+  margin-top: 2.2rem;
+
+  .dark-mode-switch {
+    font-size: 2.2rem;
+    margin-left: 0.2rem;
+    position: relative;
+    top: 0.2rem;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
 .header--title {
   color: $color-midnight;
+  display: inline-block;
   font-size: 3rem;
   font-family: $logo-font;
   height: $header-height;
@@ -41,5 +59,16 @@ $header-height: 7rem;
 
   &:hover {
     color: lighten($color-midnight, 5%);
+  }
+}
+
+.dark {
+  .header {
+    background-color: darken($color-midnight, 5%);
+    border-bottom: 3px solid lighten($color-midnight, 15%);
+  }
+
+  .header--title {
+    color: $color-cloud;
   }
 }

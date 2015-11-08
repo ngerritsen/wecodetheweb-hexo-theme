@@ -1,0 +1,12 @@
+.copyright {
+  color: darken($color-silver, 10%);
+  font-family: $heading-font;
+  text-align: center;
+  width: 100%;
+}
+
+.dark {
+  .copyright {
+    color: darken($color-silver, 35%);
+  }
+}

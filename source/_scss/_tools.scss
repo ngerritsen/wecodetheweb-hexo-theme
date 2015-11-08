@@ -9,7 +9,7 @@
   background: transparent;
   box-shadow: 0;
   border: 0;
-  color: $color-silver;
+  color: darken($color-silver, 5%);
   margin: 0;
   padding: 0;
 
@@ -19,17 +19,29 @@
 }
 
 .tools--font-small {
-  font-size: 80%;
+  font-size: 0.8em;
 }
 
 .tools--font-medium {
-  font-size: 100%;
+  font-size: 1em;
 }
 
 .tools--font-large {
-  font-size: 120%;
+  font-size: 1.2em;
 }
 
 .is-active {
   color: $color-text;
+}
+
+.dark {
+  .tools--font-small,
+  .tools--font-medium,
+  .tools--font-large {
+    color: darken($color-silver, 25%);
+  }
+
+  .is-active {
+    color: $color-cloud;
+  }
 }

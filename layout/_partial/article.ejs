@@ -1,0 +1,21 @@
+<article class="post">
+  <div class="post--heading" style="background-image: url('<%= url_for(post.path) + 'main.jpg' %>');">
+    <div class="post--heading-overlay"></div>
+    <div class="container">
+      <div class="post--heading-content">
+        <h1 class="post--title"><%= post.title %></h1>
+          <%- partial('./tag-list.ejs', { post: post }) %>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div>
+      <%- partial('./tools.ejs') %>
+      <%- partial('./meta-data.ejs', { post: post }) %>
+    </div>
+
+    <div class="post--content">
+      <%- post.content %>
+    </div>
+  </div>
+</article>
