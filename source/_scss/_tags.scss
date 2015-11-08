@@ -7,8 +7,9 @@
   background-color: $color-blue;
   display: inline-block;
   font-family: $heading-font;
-  margin-right: 1rem;
-  padding: 0.1rem 0.8rem;
+  margin: 0 1rem 0.5rem 0;
+  padding: 0 0.8rem;
+  line-height: 1.4;
 
   &:hover {
     background-color: lighten($color-blue, 5%);

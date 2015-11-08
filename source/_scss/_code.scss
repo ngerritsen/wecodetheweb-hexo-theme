@@ -16,10 +16,14 @@
     display: none;
   }
 
-  .keyword {
+  .keyword,
+  .tag {
     color: #f92672;
-  }
 
+    .title {
+      color: $color-cloud;
+    }
+  }
   .string {
     color: #fd971f
   }
@@ -30,5 +34,9 @@
 
   .built_in {
     color: #a6e22e;
+  }
+
+  .comment {
+    color: desaturate(lighten($color-midnight, 25%), 10%);
   }
 }

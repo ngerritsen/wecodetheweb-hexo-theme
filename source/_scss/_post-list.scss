@@ -22,16 +22,21 @@
   min-width: 24rem;
 }
 
-.post-list--item-title a,
-.post-list--item-title a:visited {
-  font-size: 2rem;
-  color: $color-midnight;
+.post-list--item-title {
+  margin-bottom: 0.5em;
 
-  &:hover,
-  &:active,
-  &:focus {
+  a,
+  a:visited {
+    font-size: 2rem;
     color: $color-midnight;
-    text-decoration: underline;
+
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-midnight;
+      text-decoration: underline;
+    }
   }
 }
 
