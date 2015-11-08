@@ -1,0 +1,35 @@
+.tools {
+  float: right;
+  padding-top: 1rem;
+}
+
+.tools--font-small,
+.tools--font-medium,
+.tools--font-large {
+  background: transparent;
+  box-shadow: 0;
+  border: 0;
+  color: $color-silver;
+  margin: 0;
+  padding: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.tools--font-small {
+  font-size: 80%;
+}
+
+.tools--font-medium {
+  font-size: 100%;
+}
+
+.tools--font-large {
+  font-size: 120%;
+}
+
+.is-active {
+  color: $color-text;
+}

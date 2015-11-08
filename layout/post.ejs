@@ -4,18 +4,25 @@
 <% var post = page %>
 
 <article class="post">
-  <div class="post--heading" style="background-image: url('<%= url_for(page.path) + 'main.jpg' %>');">
+  <div class="post--heading" style="background-image: url('<%= url_for(post.path) + 'main.jpg' %>');">
     <div class="post--heading-overlay"></div>
     <div class="container">
       <div class="post--heading-content">
-        <h1 class="post--title"><%= page.title %></h1>
-          <%- partial('./_partial/tag-list.ejs', { post: page }) %>
+        <h1 class="post--title"><%= post.title %></h1>
+          <%- partial('./_partial/tag-list.ejs', { post: post }) %>
       </div>
     </div>
   </div>
-  <div class="container post--content">
-    <%- partial('./_partial/meta-data.ejs', { post: page }) %>
-    <%- page.content %>
+  <div class="container">
+    <div>
+
+      <%- partial('./_partial/tools.ejs') %>
+      <%- partial('./_partial/meta-data.ejs', { post: post }) %>
+    </div>
+
+    <div class="post--content">
+      <%- post.content %>
+    </div>
   </div>
 </article>
 
