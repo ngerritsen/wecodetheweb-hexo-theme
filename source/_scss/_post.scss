@@ -42,14 +42,10 @@
   position: absolute;
 }
 
-.alt-small {
-  .post--content p {
-    font-size: 85%;
-  }
+.alt-small .post--content {
+  font-size: 90%;
 }
 
-.alt-large {
-  .post--content p {
-    font-size: 115%;
-  }
+.alt-large .post--content {
+  font-size: 110%;
 }

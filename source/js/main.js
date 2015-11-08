@@ -12,6 +12,28 @@ $().ready(function () {
   var mediumBtn = $('.tools--font-medium');
   var largeBtn = $('.tools--font-large');
 
+  initTextSize();
+
+  function initTextSize () {
+    smallBtn.click(function () {
+      applyTextSize('small');
+    });
+    mediumBtn.click(function () {
+      applyTextSize('medium');
+    });
+    largeBtn.click(function () {
+      applyTextSize('large');
+    });
+
+    if (Storage) {
+      var size = localStorage.getItem('textSize');
+
+      if (size && size !== 'null') {
+        applyTextSize(size);
+      }
+    }
+  }
+
   function applyTextSize (size) {
     storeTextSize(size);
     resetTextSize();
@@ -45,25 +67,6 @@ $().ready(function () {
     body.removeClass('alt-small');
     body.removeClass('alt-large');
   }
-
-  function initTextSize () {
-    smallBtn.click(function () {
-      applyTextSize('small');
-    });
-    mediumBtn.click(function () {
-      applyTextSize('medium');
-    });
-    largeBtn.click(function () {
-      applyTextSize('large');
-    });
-
-    if (Storage) {
-      var size = localStorage.getItem('textSize');
-      applyTextSize(size);
-    }
-  }
-
-  initTextSize();
 
   // Header hider
   var headerHight = 70;
