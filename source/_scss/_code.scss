@@ -4,7 +4,7 @@
   font-family: Hack, monospace;
   margin: 0 0 3rem;
   padding: 1.5rem;
-  overflow: scroll;
+  overflow: auto;
 
   pre {
     font-size: 1.8rem;
@@ -43,6 +43,6 @@
 
 .dark {
   .highlight {
-    background-color: darken($color-midnight, 12%);
+    background-color: darken($color-dark, 2.5%);
   }
 }

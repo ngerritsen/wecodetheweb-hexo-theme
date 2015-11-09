@@ -1,7 +1,7 @@
 module.exports = function headerHider ($) {
   var body = $('body')
   var header = $('.header')
-  var headerHight = 70
+  var headerHight = header.height()
   var previousDistance = body.scrollTop()
 
   $(window).scroll(hideHeader)

@@ -7,15 +7,16 @@
     "build": "npm run sass; npm run js",
     "watch": "npm run sass:watch && npm run js:watch",
     "sass": "node-sass ./source/_scss/main.scss -o ./source/css/",
-    "sass:watch": "node-sass -w ./source/_scss/main.scss -o ./source/css/",
+    "sass:watch": "npm run sass; node-sass -w ./source/_scss/main.scss -o ./source/css/",
     "js": "browserify -t [ uglifyify -m -c ] ./source/js/_src/main.js -o ./source/js/bundle.js",
-    "js:watch": "watchify ./source/js/_src/main.js -o ./source/js/bundle.js"
+    "js:watch": "npm run js; watchify ./source/js/_src/main.js -o ./source/js/bundle.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "browserify": "^12.0.1",
     "node-sass": "^3.4.1",
-    "uglifyify": "^3.0.1"
+    "uglifyify": "^3.0.1",
+    "watchify": "^3.6.0"
   }
 }

@@ -10,7 +10,7 @@
   </div>
   <div class="container">
     <div>
-      <%- partial('./tools.ejs') %>
+      <%- partial('./tools.ejs', { title: post.title }) %>
       <%- partial('./meta-data.ejs', { post: post }) %>
     </div>
 

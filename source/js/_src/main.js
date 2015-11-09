@@ -4,6 +4,7 @@ var headerHider = require('./header-hider')
 var backToTop = require('./back-to-top')
 var darkMode = require('./dark-mode')
 var setCopyrightYear = require('./set-copyright-year')
+var readingTools = require('./reading-tools')
 
 function main () {
   textSizeSwitcher(jQuery)
@@ -12,6 +13,7 @@ function main () {
   backToTop(jQuery)
   darkMode(jQuery)
   setCopyrightYear(jQuery)
+  readingTools(jQuery)
 }
 
 jQuery().ready(main)

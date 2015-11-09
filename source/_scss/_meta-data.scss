@@ -16,8 +16,26 @@
   width: 3.2rem;
 }
 
+.meta-data--date-small {
+  display: inline;
+}
+
+.meta-data--date-large {
+  display: none;
+}
+
 .dark {
   .meta-data {
     color: darken($color-silver, 25%);
+  }
+}
+
+@media only screen and (min-width: $screen-S) {
+  .meta-data--date-small {
+    display: none;
+  }
+
+  .meta-data--date-large {
+    display: inline;
   }
 }

@@ -11,7 +11,7 @@ $header-height: 7rem;
   position: fixed;
   top: 0;
   width: 100%;
-  transition: all 0.3s ease;
+  transition: top 0.2s ease;
   z-index: 999;
 
   .container {
@@ -64,8 +64,8 @@ $header-height: 7rem;
 
 .dark {
   .header {
-    background-color: darken($color-midnight, 5%);
-    border-bottom: 3px solid lighten($color-midnight, 15%);
+    background-color: $color-dark;
+    border-bottom: 3px solid lighten($color-dark, 10%);
   }
 
   .header--title {

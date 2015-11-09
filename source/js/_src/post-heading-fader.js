@@ -1,8 +1,11 @@
 module.exports = function postHeadingFader ($) {
   var body = $('body')
+  var postHeadingOverlay = $('.post--heading-overlay')
+  var postHeadingOverlayHeight = postHeadingOverlay.height()
+  var headerHight = $('.header').height()
   var minimumOverlay = 0.2
-  var start = 50
-  var end = 340
+  var start = headerHight
+  var end = postHeadingOverlayHeight - 150;
   var range = end - start
 
   $(window).scroll(fadeHeading)
@@ -17,7 +20,7 @@ module.exports = function postHeadingFader ($) {
     var opacity = minimumOverlay + ( 1 - minimumOverlay ) * ( difference / range )
 
     if (typeof distance === 'number') {
-      $('.post--heading-overlay').css({
+      postHeadingOverlay.css({
         'opacity': opacity > 1 ? 1 : opacity
       })
     }
