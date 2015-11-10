@@ -1,12 +1,36 @@
 module.exports = function textSizeSwitcher ($) {
   var body = $('body')
-  var smallBtn  = $('.tools--font-small')
-  var mediumBtn = $('.tools--font-medium')
-  var largeBtn = $('.tools--font-large')
+  var smallBtn  = $(
+    '<button name="Small text" class="tools--font-small">' +
+      '<i class="fa fa-font"></i>' +
+    '</button>'
+  )
+  var mediumBtn = $(
+    '<button name="Medium text" class="tools--font-medium is-active">' +
+      '<i class="fa fa-font"></i>' +
+    '</button>'
+  )
+  var largeBtn = $(
+    '<button name="Large text" class="tools--font-large">' +
+      '<i class="fa fa-font"></i>' +
+    '</button>'
+  )
+  var readingTools = $(
+    '<div class="tools--tool">' +
+    '</div>'
+  )
+  var tools = $('.tools')
+  var toolsContent = tools.find('.tools--content')
 
-  initTextSize()
+  initialize()
 
-  function initTextSize () {
+  function initialize () {
+    readingTools.append(smallBtn)
+    readingTools.append(mediumBtn)
+    readingTools.append(largeBtn)
+
+    toolsContent.append(readingTools)
+
     smallBtn.click(function () {
       applyTextSize('small')
     })

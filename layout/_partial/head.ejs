@@ -4,7 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-  <title><%= config.title %></title>
+  <% if (is_post()) { %>
+    <title><%= config.title + ' | ' + page.title %></title>
+    <meta name="description" content="<%= page.excerpt %>">
+  <% } else { %>
+    <title><%= config.title + ' | ' + config.subtitle %></title>
+    <meta name="description" content="<%= config.description %>">
+  <% } %>
 
   <%- css('css/main') %>
   <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic' rel='stylesheet' type='text/css'>

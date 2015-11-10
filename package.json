@@ -6,8 +6,8 @@
   "scripts": {
     "build": "npm run sass; npm run js",
     "watch": "npm run sass:watch && npm run js:watch",
-    "sass": "node-sass ./source/_scss/main.scss -o ./source/css/",
-    "sass:watch": "npm run sass; node-sass -w ./source/_scss/main.scss -o ./source/css/",
+    "sass": "node-sass ./source/_scss/main.scss --output-style compressed -o ./source/css/",
+    "sass:watch": "node-sass ./source/_scss/main.scss -o ./source/css/; node-sass -w ./source/_scss/main.scss -o ./source/css/",
     "js": "browserify -t [ uglifyify -m -c ] ./source/js/_src/main.js -o ./source/js/bundle.js",
     "js:watch": "npm run js; watchify ./source/js/_src/main.js -o ./source/js/bundle.js"
   },

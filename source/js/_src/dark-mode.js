@@ -1,10 +1,15 @@
 module.exports = function darkMode ($) {
   var body = $('body')
-  var darkSwitch = $('#dark-mode-switch')
+  var headerContainer = $('.header').find('.container')
+  var headerTools = $('<div class="header--tools">Dark </div>')
+  var darkSwitch = $('<i class="fa fa-toggle-off dark-mode-switch" id="dark-mode-switch"></i>')
 
   initialize()
 
   function initialize () {
+    headerTools.append(darkSwitch)
+    headerContainer.prepend(headerTools)
+
     var isDark = getDarkMode()
 
     if (isDark === 'true' || isDark === true) {
