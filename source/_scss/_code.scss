@@ -17,22 +17,27 @@
   }
 
   .keyword,
-  .tag {
+  .tag,
+  .variable {
     color: #f92672;
 
     .title {
       color: $color-cloud;
     }
   }
-  .string {
+  .string,
+  .tag .value {
     color: #fd971f
   }
 
-  .number {
+  .number,
+  .hexcolor {
     color: #66d9ef;
   }
 
-  .built_in {
+  .built_in,
+  .class,
+  .tag .attribute {
     color: #a6e22e;
   }
 

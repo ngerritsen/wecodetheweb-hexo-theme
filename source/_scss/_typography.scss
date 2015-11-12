@@ -37,8 +37,9 @@ h3 {
   font-size: 1.2em;
 }
 
-p {
-  margin: 0 0 1.8em 0;
+p,
+pre {
+  margin: 0 0 2em 0;
 }
 
 h1,
@@ -46,17 +47,17 @@ h2,
 h3,
 h4 {
   font-family: $heading-font;
-  margin: 0 0 1em 0;
+  margin: 0 0 0.7em 0;
 }
 
-ul {
-  margin: 0 0 3rem 0;
-  padding-left: 2rem;
+ul, ol {
+  margin: 0 0 3rem;
+  padding-left: 3rem;
 }
 
 blockquote {
   margin: 0 0 3.5rem;
-  padding: 0 0 0 3.5em;
+  padding: 0 0 0 2.5em;
   position: relative;
   opacity: 0.6;
 

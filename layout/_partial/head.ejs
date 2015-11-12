@@ -3,13 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="og:site_name" content="<%= config.title %>">
+  <meta name="og:type" content="blog">
+  <meta property="og:locale" content="en_EN"/>
+  <meta property="og:url" content="<%= url %>" />
 
   <% if (is_post()) { %>
-    <title><%= config.title + ' | ' + page.title %></title>
-    <meta name="description" content="<%= page.excerpt %>">
+    <title><%= page.title %></title>
+    <meta name="description" content="<%= strip_html(page.excerpt) %>">
+    <meta name="og:description" content="<%= strip_html(page.excerpt) %>">
+    <meta name="og:title" content="<%= page.title %>">
   <% } else { %>
     <title><%= config.title + ' | ' + config.subtitle %></title>
     <meta name="description" content="<%= config.description %>">
+    <meta name="og:description" content="<%= config.description %>">
+    <meta name="og:title" content="<%= config.title %>">
   <% } %>
 
   <%- css('css/main') %>
