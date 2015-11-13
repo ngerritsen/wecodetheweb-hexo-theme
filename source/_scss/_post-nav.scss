@@ -1,6 +1,8 @@
 .post-nav {
   @include clearfix;
-  
+
+  margin-bottom: 5rem;
+
   .prev,
   .next {
     background-color: $color-blue;
