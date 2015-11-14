@@ -1,9 +1,9 @@
-<article class="post-list--item">
+<article class="post-list--item<%= headline ? ' alt-headline' : '' %><%= subheadline ? ' alt-sub-headline' : '' %>">
   <% var postUrl = url_for(post.path) %>
   <% var imgUrl = postUrl + 'main.jpg'%>
 
-
   <div class="post-list--item-image" style="background-image: url('<%= imgUrl %>')"></div>
+
   <div class="post-list--item-content">
     <%- partial('./meta-data.ejs', { post: post }) %>
 

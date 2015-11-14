@@ -44,12 +44,13 @@
   }
 }
 
-.post-list--item.alt-heading {
+.alt-headline.post-list--item ,
+.alt-sub-headline.post-list--item {
   display: block;
 
   .post-list--item-image {
     height: 30rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     width: 100%;
   }
 }
@@ -68,6 +69,21 @@
     margin: 0 3rem 0 0;
     min-width: 24rem;
     width: 24rem;
+  }
+
+  .alt-sub-headline.post-list--item  {
+    clear: none;
+    float: left;
+    margin-right: 4%;
+    width: 48%;
+
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+
+    .post-list--item-image {
+      height: 30rem;
+    }
   }
 }
 
