@@ -18,6 +18,13 @@
       <%- post.content %>
     </div>
 
+    <h2>Related posts</h2>
+    <div class="post--related">
+      <% get_related_posts().forEach(function (post) { %>
+        <%- partial('./post-block.ejs', { post: post }) %>
+      <% }) %>
+    </div>
+
     <div class="post--comments" id="disqus_thread">
       <script>
       var disqus_config = function () {
@@ -34,6 +41,5 @@
       </script>
       <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
     </div>
-
   </div>
 </article>
