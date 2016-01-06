@@ -2,7 +2,9 @@
   <% var postUrl = url_for(post.path) %>
   <% var imgUrl = postUrl + 'main.jpg'%>
 
-  <div class="post-list--item-image" style="background-image: url('<%= imgUrl %>')"></div>
+  <a href="<%= postUrl %>">
+    <div class="post-list--item-image" style="background-image: url('<%= imgUrl %>')"></div>
+  </a>
 
   <div class="post-list--item-content">
     <%- partial('./meta-data.ejs', { post: post }) %>
