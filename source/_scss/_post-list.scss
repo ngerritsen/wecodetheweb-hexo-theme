@@ -62,12 +62,15 @@
     display: flex;
   }
 
+  .post-list--item-image-link {
+    min-width: 27rem;
+  }
+
   .post-list--item-image {
     @include background-img($color-midnight);
 
     float: left;
     margin: 0 3rem 0 0;
-    min-width: 24rem;
     width: 24rem;
   }
 
