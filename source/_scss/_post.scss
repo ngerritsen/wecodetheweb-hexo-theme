@@ -2,6 +2,8 @@
 .post--comments,
 .post--related {
   margin-bottom: 5rem;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .post--heading {
