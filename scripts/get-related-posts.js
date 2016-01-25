@@ -2,6 +2,10 @@ function getRelatedPosts (options) {
   var relatedPosts = [];
   var existingPosts = [];
 
+  var tagNames = this.post.tags.map(function (tag) {
+    return tag.name
+  })
+
   this.post.tags.each(function (tag) {
     tag.posts.each(function(post) {
       relatedPosts.push(post);
@@ -22,7 +26,23 @@ function getRelatedPosts (options) {
     return !postExists(post);
   });
 
-  return uniqueRelatedPosts.splice(0, 3);
+  var uniqueRelatedPostsScored = uniqueRelatedPosts.map(function (relatedPost) {
+    var tagScore = relatedPost.tags.reduce(function (score, tag) {
+      var matches = tagNames.filter(function (tagName) {
+        return tagName === tag.name;
+      });
+
+      return matches.length > 0 ? ++score : score;
+    }, 0)
+
+    return Object.assign(relatedPost, { tagScore: tagScore });
+  })
+
+  var uniqueRelatedPostsScoredAndSorted = uniqueRelatedPostsScored.sort(function (a, b) {
+    return b.tagScore - a.tagScore;
+  });
+
+  return uniqueRelatedPostsScoredAndSorted.splice(0, 3);
 }
 
 hexo.extend.helper.register('get_related_posts', getRelatedPosts);
