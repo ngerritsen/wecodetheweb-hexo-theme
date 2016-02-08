@@ -1,14 +1,30 @@
-.copyright {
+.footer {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.copyright,
+.copyright:visited {
   color: $color-silver;
   font-family: $heading-font;
   font-size: 0.9em;
-  margin: 0 0 4rem 0;
-  text-align: center;
-  width: 100%;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-silver;
+    text-decoration: underline;
+  }
 }
 
-.dark {
-  .copyright {
+.dark .copyright,
+.dark .copyright:visited  {
+  color: darken($color-silver, 35%);
+
+  &:hover,
+  &:active,
+  &:focus {
     color: darken($color-silver, 35%);
   }
 }
