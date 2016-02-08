@@ -16,6 +16,18 @@
   width: 3.2rem;
 }
 
+.meta-data--link,
+.meta-data--link:visited {
+  color: darken($color-silver, 5%);
+  padding: 0 4px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: lighten($color-midnight, 25%);
+  }
+}
+
 .meta-data--date-small {
   display: inline;
 }
