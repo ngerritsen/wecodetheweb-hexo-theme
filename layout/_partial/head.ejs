@@ -13,6 +13,7 @@
     <meta name="description" content="<%= strip_html(page.excerpt) %>">
     <meta name="og:description" content="<%= strip_html(page.excerpt) %>">
     <meta name="og:title" content="<%= page.title %>">
+    <meta name="og:image" content="<%= page.permalink %>main.jpg">
   <% } else { %>
     <title><%= config.title + ' | ' + config.subtitle %></title>
     <meta name="description" content="<%= config.description %>">
