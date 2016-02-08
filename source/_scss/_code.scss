@@ -46,16 +46,17 @@
   }
 }
 
-.dark {
-  .highlight {
-    background-color: darken($color-dark, 2.5%);
-  }
-}
-
 code {
   background-color: lighten($color-carrot, 40%);
   border-radius: 2px;
   color: darken($color-carrot, 5%);
   font-size: 1.2em;
   padding: 0.2rem 0.4rem;
+}
+
+.dark {
+  .highlight,
+  code {
+    background-color: darken($color-dark, 2.5%);
+  }
 }
