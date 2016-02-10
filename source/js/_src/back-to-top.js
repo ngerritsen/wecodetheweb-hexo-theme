@@ -1,13 +1,7 @@
 module.exports = function backToTop ($) {
-  $('.header a').click(preventBubble)
-  $('.header--tools').click(preventBubble)
-  $('.header').click(scrollToTop)
-  
-  function preventBubble (event) {
-    event.stopPropagation()
-  }
+  $('.tools').click(scrollToTop)
 
   function scrollToTop () {
-      $('html, body').animate({ scrollTop: 0 }, 'slow')
+    $('html, body').animate({ scrollTop: 0 }, 'slow')
   }
 }

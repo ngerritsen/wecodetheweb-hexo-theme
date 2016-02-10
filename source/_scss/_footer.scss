@@ -17,14 +17,3 @@
     text-decoration: underline;
   }
 }
-
-.dark .copyright,
-.dark .copyright:visited  {
-  color: darken($color-silver, 35%);
-
-  &:hover,
-  &:active,
-  &:focus {
-    color: darken($color-silver, 35%);
-  }
-}

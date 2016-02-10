@@ -5,7 +5,7 @@ html {
 body {
   color: $color-text;
   font-family: $text-font;
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 
 a,
@@ -74,6 +74,8 @@ blockquote {
   }
 }
 
-.dark {
-  color: $color-cloud;
+@media only screen and (min-width: $screen-S) {
+  body {
+    font-size: 1.8rem;
+  }
 }

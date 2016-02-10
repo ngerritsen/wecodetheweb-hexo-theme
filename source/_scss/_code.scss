@@ -53,10 +53,3 @@ code {
   font-size: 1.2em;
   padding: 0.2rem 0.4rem;
 }
-
-.dark {
-  .highlight,
-  code {
-    background-color: darken($color-dark, 2.5%);
-  }
-}

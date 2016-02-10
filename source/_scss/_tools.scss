@@ -1,102 +1,33 @@
 .tools {
-  float: right;
-  padding-top: 1rem;
+  background-color: $color-white;
+  border-bottom: 1px solid darken($color-cloud, 2.5%);
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  transition: top 0.2s ease;
+  top: 0;
+  z-index: 99;
 
   &.is-sticky {
-    background-color: $color-white;
-    border-bottom: 1px solid darken($color-cloud, 2.5%);
-    float: none;
-    left: 0;
-    position: fixed;
-    right: 0;
-    transition: top 0.2s ease;
-    top: 0;
-    z-index: 99;
-
-    .tools--content {
-      @extend .container;
-
-      display: flex;
-      justify-content: space-between;
-      position: relative;
-      top: -0.6rem;
-    }
-
-    .tools--tool {
-      min-width: 6rem;
-      text-align: right;
-    }
-
-    .tools--title {
-      display: inline-block;
-    }
+    display: block;
   }
-
-  &.alt-with-header.is-sticky {
-    top: 7rem;
-  }
-}
-
-.tools--title {
-  color: $color-asphalt;
-  display: none;
-  font-family: $heading-font;
-  font-size: 0.9em;
-  font-weight: bold;
-  margin-right: 1.5rem;
-  padding: 0.5rem 0 0 0;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.tools--font-small,
-.tools--font-medium,
-.tools--font-large {
-  background: transparent;
-  box-shadow: 0;
-  border: 0;
-  color: darken($color-silver, 5%);
-  margin: 0 0.3rem 0 0;
-  padding: 0;
 
   &:hover {
     cursor: pointer;
   }
 }
 
-.tools--font-small {
-  font-size: 0.8em;
+.tools--content {
+  @extend .container;
 }
 
-.tools--font-medium {
-  font-size: 1em;
-}
-
-.tools--font-large {
-  font-size: 1.2em;
-}
-
-.is-active {
-  color: $color-text;
-}
-
-.dark {
-  .tools.is-sticky {
-    background-color: $color-dark;
-    border-bottom: 1px solid lighten($color-dark, 5%);
-  }
-
-  .tools--font-small,
-  .tools--font-medium,
-  .tools--font-large {
-    color: darken($color-silver, 25%);
-  }
-
-  .is-active {
-    color: $color-cloud;
-  }
-
-  .tools--title {
-    color: darken($color-silver, 5%);
-  }
+.tools--title {
+  color: $color-asphalt;
+  font-family: $heading-font;
+  font-weight: bold;
+  height: 2em;
+  line-height: 2em;
+  overflow: hidden;
+  white-space: nowrap;
 }

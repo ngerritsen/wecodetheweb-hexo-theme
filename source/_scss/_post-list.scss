@@ -1,5 +1,5 @@
 .post-list {
-  padding-top: 3rem;
+  padding-top: 1rem;
 }
 
 .post-list--item {
@@ -86,21 +86,6 @@
 
     .post-list--item-image {
       height: 30rem;
-    }
-  }
-}
-
-.dark {
-  .post-list--item-title {
-    a,
-    a:visited {
-      color: darken($color-silver, 5%);
-
-      &:hover,
-      &:active,
-      &:focus {
-        color: darken($color-silver, 5%);
-      }
     }
   }
 }
