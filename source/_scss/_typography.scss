@@ -5,7 +5,7 @@ html {
 body {
   color: $color-text;
   font-family: $text-font;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 a,
@@ -71,11 +71,5 @@ blockquote {
     left: 0;
     position: absolute;
     top: 0.5rem;
-  }
-}
-
-@media only screen and (min-width: $screen-S) {
-  body {
-    font-size: 1.8rem;
   }
 }
