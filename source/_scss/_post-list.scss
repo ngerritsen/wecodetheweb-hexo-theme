@@ -3,7 +3,9 @@
 }
 
 .post-list--item {
-  margin-bottom: 7rem;
+  border-bottom: 1px solid darken($color-white, 15%);
+  padding-bottom: 3rem;
+  margin-bottom: 5rem;
 
   .meta-data {
     margin: -1.2rem 0 1.5rem 0;
@@ -59,6 +61,7 @@
   .post-list--item {
     @include clearfix;
 
+    border-bottom: none;
     display: flex;
   }
 
