@@ -29,8 +29,17 @@ pre {
   line-height: 1.8;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: $heading-font;
+  margin: 0 0 0.8em 0;
+}
+
 h2 {
   font-size: 1.4em;
+  margin-top: 2em;
 }
 
 h3 {
@@ -40,14 +49,6 @@ h3 {
 p,
 pre {
   margin: 0 0 2em 0;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: $heading-font;
-  margin: 0 0 0.7em 0;
 }
 
 ul, ol {
