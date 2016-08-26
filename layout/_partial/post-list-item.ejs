@@ -2,7 +2,7 @@
   <% var postUrl = url_for(post.path) %>
   <% var imgUrl = postUrl + 'main.jpg'%>
 
-  <a href="<%= postUrl %>" class="post-list--item-image-link">
+  <a href="<%= postUrl %>" title="Read: <%= post.title %>" class="post-list--item-image-link">
     <div class="post-list--item-image" style="background-image: url('<%= imgUrl %>')"></div>
   </a>
 
