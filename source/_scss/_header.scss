@@ -17,12 +17,14 @@ $header-height: 9rem;
   font-weight: bold;
   height: $header-height;
   line-height: $header-height;
+  text-transform: lowercase;
+  word-spacing: -0.5ex;
 
   &:before {
     color: $color-blue;
     content: '</>';
     font-weight: bold;
-    margin-right: 0.3rem;
+    margin-right: 0.8rem;
   }
 
   &:hover {
