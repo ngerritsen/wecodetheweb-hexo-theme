@@ -1,14 +1,17 @@
 function getRelatedPosts (options) {
   var relatedPosts = [];
   var existingPosts = [];
+  var currentPost = this.post;
 
-  var tagNames = this.post.tags.map(function (tag) {
+  var tagNames = currentPost.tags.map(function (tag) {
     return tag.name
   })
 
-  this.post.tags.each(function (tag) {
+  currentPost.tags.each(function (tag) {
     tag.posts.each(function(post) {
-      relatedPosts.push(post);
+      if (post.id !== currentPost.id) {
+        relatedPosts.push(post);
+      }
     })
   })
 

@@ -44,6 +44,10 @@
   .comment {
     color: desaturate(lighten($color-midnight, 25%), 10%);
   }
+
+  .line {
+    min-height: 1.8rem;
+  }
 }
 
 code {
